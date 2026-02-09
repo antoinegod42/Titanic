@@ -6,12 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: LightYellow;
+    background-color: Bisque;
 }
 
 
 nav {
-    background-color: Coral;
+    background-color: Tomato;
 }
 
 .menu {
@@ -31,14 +31,14 @@ nav {
 }
 
 .menu > li > a:hover {
-    background-color: LightSalmon;
+    background-color: Coral;
 }
 
 
 .submenu {
     display: none;
     position: absolute;
-    background-color: LightSalmon;
+    background-color: Coral;
     list-style: none;
     top: 100%;
     left: 0;
@@ -53,7 +53,7 @@ nav {
 }
 
 .submenu li a:hover {
-    background-color: PeachPuff;
+    background-color: LightSalmon;
 }
 
 
