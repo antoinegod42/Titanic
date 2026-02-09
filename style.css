@@ -1,1 +1,63 @@
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Menu principal */
+nav {
+    background-color: #8b0000;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu > li > a:hover {
+    background-color: #a52a2a;
+}
+
+/* Sous-menu */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #a52a2a;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #c0392b;
+}
+
+/* Apparition du menu déroulant */
+.dropdown:hover .submenu {
+    display: block;
+}
 
