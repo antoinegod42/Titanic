@@ -79,6 +79,7 @@ ul.a {
 }
 h1,h3,p,label,ul.a,ol {
   color: DarkSlateGray;
+  font-family: "Times New Roman",  serif;
 }
 ol.recette {
   list-style-type: decimal; 
@@ -90,7 +91,7 @@ ol.recette li {
 }
 
 table.info {
-  width: 75%;               
+  width: 50%;               
   margin: 20px auto;        
   border-collapse: collapse; 
   text-align: center;
@@ -114,4 +115,12 @@ table.info td {
 #personnes {
   width: 45px; 
   padding: 5px
+}
+
+#titre {
+  color: white;
+  font-size: 24px;
+  padding-left:10px;
+  padding-right: 5px;
+  font-family: "Times New Roman",  serif;
 }
