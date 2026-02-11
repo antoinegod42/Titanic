@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css?v2">
-  <title> Dessert2 </title>
+  <link rel="stylesheet" href="style.css">
+  <title> La Mousse au Chocolat </title>
 </head>
 <body>
 
@@ -41,5 +41,71 @@
         </li>
     </ul>
 </nav>
+<h1>La Mousse au Chocolat</h1><br>
+<center> 
+<img src="https://www.cookomix.com/wp-content/uploads/2016/04/mousse-au-chocolat-thermomix.jpg" />
+
+<p> <br>La mousse au chocolat est un dessert simple mais délicieux. <br>Elle est réalisée à base de chocolat noir fondu, mélangé à des jaunes d'œufs et des blancs montés en neige. <br> Cette préparation lui donne une texture légère, aérienne et fondante. Servie bien fraîche, elle est intense en goût et très appréciée des amateurs de chocolat.</p> <br>
+
+<table class="info">
+  <thead>
+    <tr>
+      <th>Temps de préparation</th>
+      <th>Coût</th>
+      <th>Difficulté</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15 min</td>
+      <td>Peu chère</td>
+      <td>Très facile</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><br>Les Ingrédients</h3> <br>
+
+  <label for="personnes">Nombre de personnes :</label>
+  <input type="number" id="personnes" value="4" min="1" onchange="updateIngredients()">
+
+  <ul class="a">
+    <li ><span id="chocolat"></span> g de chocolat</li>
+    <li ><span id="oeufs"></span> oeuf(s)</li>
+    <li ><span id="vanille"></span> sachet de vanille</li>
+  </ul>
+
+  <script>
+    function updateIngredients() {
+      const personnes = Number(document.getElementById("personnes").value);
+
+      document.getElementById("chocolat").textContent = personnes * 25;
+      document.getElementById("oeufs").textContent = personnes * 1;
+      document.getElementById("vanille").textContent = personnes * 0.25;
+    }
+
+    updateIngredients();
+  </script>
+  <br>
+  <h3>Les ustensiles de cuisines</h3><br>
+  <ul class = "a">
+    <li>Une casserole</li>
+    <li>Un fouet</li>
+    <li>Une balance de cuisine</li>
+    <li> Des petits bols ou petits verres</li>
+  </ul>
+  <br>
+<h3>La préparation</h3><br>
+  </center>
+  <ol class = "recette">
+      <li>Séparez les blancs des jaunes d'oeufs.</li> 
+    <li>Faites ramollir le chocolat dans une casserole au bain-marie</li>
+    <li>Retirez du feu puis ajoutez les jaunes et la vanille.</li>
+    <li>Battez les blancs en neige ferme.</li>
+    <li>Ajoutez délicatement les blancs au mélange.</li>
+    <li>Versez dans des petits pots de verres ou des petits bols.</li>
+    <li>Mettez au frais pour environ deux heures.</li>
+    <li>Ajoutez un peu de cacao en poudre ou des pepites de chocolat et degustez!</li>
+  </ol>
 </body>
 </html>
