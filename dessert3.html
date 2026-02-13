@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css?v2">
-  <title> Dessert3 </title>
+  <link rel="stylesheet" href="style.css">
+  <title> La Tarte Tatin </title>
 </head>
 <body>
 
@@ -35,12 +35,81 @@
         <li class="dropdown">
             <a href="#">Desserts</a>
             <ul class="submenu">
-                <li><a href="dessert1.html">dessert1</a></li>
-                <li><a href="dessert2.html">dessert2</a></li>
-                <li><a href="dessert3.html">dessert3</a></li>
+                <li><a href="dessert1.html">La crème brulée</a></li>
+                <li><a href="dessert2.html">La mousse au chocolat</a></li>
+                <li><a href="dessert3.html">La tarte tatin</a></li>
             </ul>
         </li>
     </ul>
 </nav>
+<h1>La Tarte Tatin</h1><br>
+<center> 
+<img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/fa65c84138a8a50ef5715d4e73386e79/Derivates/b7cc05b337766eb797e63f7b7d92925c8206abd8.jpg" />
+
+<p> <br>La Tarte Tatin est l’un des desserts les plus emblématiques de la pâtisserie française.<br> Elle se distingue par sa cuisson « à l’envers » : les pommes sont d’abord caramélisées dans du beurre et du sucre, puis recouvertes de pâte avant d’être mises au four.<br> Après cuisson, on la retourne pour révéler une surface brillante, dorée et intensément parfumée.</p> <br>
+
+<table class="info">
+  <thead>
+    <tr>
+      <th>Temps de préparation</th>
+      <th>Coût</th>
+      <th>Difficulté</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1h10</td>
+      <td>Peu chère</td>
+      <td>Facile</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><br>Les Ingrédients</h3> <br>
+
+  <label for="personnes">Nombre de personnes :</label>
+  <input type="number" id="personnes" value="6" min="1" onchange="updateIngredients()">
+
+  <ul class="a">
+    <li ><span id="beurre"></span> g de beurre</li>
+    <li ><span id="pomme"></span> pommes</li>
+    <li ><span id="pate"></span> pâte feuilletée</li>
+    <li ><span id="vanille"></span> sachet de vanille</li>
+    <li ><span id="sucre"></span> g de sucre</li>
+  </ul>
+
+  <script>
+    function updateIngredients() {
+      const personnes = Number(document.getElementById("personnes").value);
+
+      document.getElementById("beurre").textContent = personnes * 17;
+      document.getElementById("pomme").textContent = Math.ceil(personnes * 1.5);
+      document.getElementById("pate").textContent = Math.ceil(personnes * 0.25);
+      document.getElementById("vanille").textContent = Math.ceil(personnes * 0.33);
+      document.getElementById("sucre").textContent = personnes * 17;
+    }
+
+    updateIngredients();
+  </script>
+  <br>
+  <h3>Les ustensiles de cuisines</h3><br>
+  <ul class = "a">
+    <li>Un four</li>
+    <li>Un moule à tarte</li>
+    <li>Une spatule</li>
+  </ul>
+  <br>
+<h3>La préparation</h3><br>
+  </center>
+  <ol class = "recette">
+      <li>Préchauffez votre four à 180°.</li> 
+    <li>Faites fondre votre beure sur le feu pour l'étaler sur le moule.</li>
+    <li>Ajoutez du sucre et attendez jusqu'a obtenir du caramèle doré.</li>
+    <li>Epluchez vos pomme et coupez les de sorte à les disposée en courrones dans le four.</li>
+    <li>Soupoudrez de sucre vanillé ou de cannelle.</li>
+    <li>Recouvrez votre plat de la pâte feuilletée en appuyant bien sur les bords</li>
+    <li>Mettez au four pour environ 40 minutes.</li>
+    <li>Degustez!</li>
+  </ol>
 </body>
 </html>
