@@ -9,38 +9,87 @@
 </head>
 <body>
 
-<nav>
-    <ul class="menu">
-      <li id ="titre">Enquête culinaire</li>
-        <li><a href="index.html">Accueil</a></li>
+<div id="menu-container"></div>
 
-        <li class="dropdown">
-            <a href="#">Entrées</a>
-            <ul class="submenu">
-                <li><a href="entree1.html">entree1</a></li>
-                <li><a href="entree2.html">entree2</a></li>
-                <li><a href="entree3.html">entree3</a></li>
-            </ul>
-        </li>
+<script>
+fetch("menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+  });
+</script>
+  
+<h1>La Ratatouille</h1><br>
+<center> 
+<img src="https://unjouruneepice.com/modules/ph_simpleblog/covers/45.jpg" width = 50% />
 
-        <li class="dropdown">
-            <a href="#">Plats</a>
-            <ul class="submenu">
-                <li><a href="plat1.html">plat1</a></li>
-                <li><a href="plat2.html">plat2</a></li>
-                <li><a href="plat3.html">plat3</a></li>
-            </ul>
-        </li>
+<p> La ratatouille est un plat traditionnel du sud de la France, originaire de Nice.<br> C’est une spécialité provençale simple, colorée et pleine de soleil. <br>Elle est principalement composé de légumes du sud et <br>est un très bon accompagnement pour les barbecues et grillades. </p> <br>
 
-        <li class="dropdown">
-            <a href="#">Desserts</a>
-            <ul class="submenu">
-                <li><a href="dessert1.html">dessert1</a></li>
-                <li><a href="dessert2.html">dessert2</a></li>
-                <li><a href="dessert3.html">dessert3</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
+<table class="info">
+  <thead>
+    <tr>
+      <th>Temps de préparation</th>
+      <th>Coût</th>
+      <th>Difficulté</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1h20</td>
+      <td>Moyen</td>
+      <td>Facile</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><br>Les Ingrédients</h3> <br>
+
+  <label for="personnes">Nombre de personnes :</label>
+  <input type="number" id="personnes" value="4" min="1" onchange="updateIngredients()">
+
+  <ul class="a">
+    <li ><span id="aubergine"></span> g d'aubergine</li>
+    <li ><span id="courgette"></span> g de courgette</li>
+    <li ><span id="poivron"></span> g de poivron</li>
+    <li ><span id="onion"></span> g de onion</li>
+    <li ><span id="tomate"></span> g de tomate</li>
+  </ul>
+
+  <script>
+    function updateIngredients() {
+      const personnes = Number(document.getElementById("personnes").value);
+
+      document.getElementById("aubergine").textContent = personnes * 88;
+      document.getElementById("courgette").textContent = personnes * 88;
+      document.getElementById("poivron").textContent = personnes * 88;
+      document.getElementById("onion").textContent = personnes * 88;
+      document.getElementById("tomate").textContent = personnes * 125;
+    }
+
+    updateIngredients();
+  </script>
+  <br>
+  <h3>Les ustensiles de cuisines</h3><br>
+  <ul class = "a">
+    <li>Une poêle </li>
+    <li>Une planche à découper </li>
+    <li>Un saladier </li>
+  </ul>
+  <br>
+<h3>La préparation</h3><br>
+  </center>
+  <ol class = "recette">
+      <li>Coupez les tomates en quartiers, les aubergines et les courgettes en rondelles.</li> 
+    <li>Emincez les poivrons en lamelles et les onions en lamelles.</li>
+    <li>Chauffez 2 cuillère à soupe d'huile dans une poêle , faites y fondre les onions et les poivrons.</li>
+    <li>Ajoutez les tomates, l'ail et du thym ou du laurier.</li>
+    <li>Salez et poivrez puis laissez mijoter à couvert pendant 42 minutes à feu doux.</li>
+    <li>Faites cuire séparemment les aubergines et les courgettes.</li>
+    <li>Un fois les légumes bien cuit, ajoutez les au mélanges et prolongez la cuisson pendant 10 min.</li>
+    <li>Epicez le tout et dégustez!</li>
+  </ol>
+
+
+
 </body>
 </html>
