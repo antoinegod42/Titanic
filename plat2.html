@@ -9,38 +9,87 @@
 </head>
 <body>
 
-<nav>
-    <ul class="menu">
-      <li id ="titre">Enquête culinaire</li>
-        <li><a href="index.html">Accueil</a></li>
+<div id="menu-container"></div>
 
-        <li class="dropdown">
-            <a href="#">Entrées</a>
-            <ul class="submenu">
-                <li><a href="entree1.html">entree1</a></li>
-                <li><a href="entree2.html">entree2</a></li>
-                <li><a href="entree3.html">entree3</a></li>
-            </ul>
-        </li>
+<script>
+fetch("menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+  });
+</script>
 
-        <li class="dropdown">
-            <a href="#">Plats</a>
-            <ul class="submenu">
-                <li><a href="plat1.html">plat1</a></li>
-                <li><a href="plat2.html">plat2</a></li>
-                <li><a href="plat3.html">plat3</a></li>
-            </ul>
-        </li>
+<h1>Le Boeuf Bourgignon</h1><br>
+<center> 
+<img src="https://media.hachette.fr/fit-in/750x488/10/2023-12/articles-recette-17.png" width = 50% />
 
-        <li class="dropdown">
-            <a href="#">Desserts</a>
-            <ul class="submenu">
-                <li><a href="dessert1.html">dessert1</a></li>
-                <li><a href="dessert2.html">dessert2</a></li>
-                <li><a href="dessert3.html">dessert3</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
+<p> Le Bœuf Bourguignon est l’un des plats les plus emblématiques de la cuisine française.<br> Originaire de Bourgogne, il met à l’honneur deux produits phares de la région : le bœuf et le vin rouge. </p> <br>
+
+<table class="info">
+  <thead>
+    <tr>
+      <th>Temps de préparation</th>
+      <th>Coût</th>
+      <th>Difficulté</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5h</td>
+      <td>Moyen</td>
+      <td>Facile</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><br>Les Ingrédients</h3> <br>
+
+  <label for="personnes">Nombre de personnes :</label>
+  <input type="number" id="personnes" value="4" min="1" onchange="updateIngredients()">
+
+  <ul class="a">
+    <li ><span id="onion"></span> onion</li>
+    <li ><span id="carotte"></span> carotte</li>
+    <li ><span id="vin"></span> bouteile de vin rouge</li>
+    <li ><span id="beurre"></span> g de beurre</li>
+    <li ><span id="boeuf"></span> g de bourguignon</li>
+  </ul>
+
+  <script>
+    function updateIngredients() {
+      const personnes = Number(document.getElementById("personnes").value);
+
+      document.getElementById("onion").textContent = personnes * 1;
+      document.getElementById("carotte").textContent = personnes * 1;
+      document.getElementById("vin").textContent = personnes * 0.25;
+      document.getElementById("beurre").textContent = personnes * 25;
+      document.getElementById("boeuf").textContent = personnes * 150;
+    }
+
+    updateIngredients();
+  </script>
+  <br>
+  <h3>Les ustensiles de cuisines</h3><br>
+  <ul class = "a">
+    <li>Une cocotte </li>
+    <li>Un four </li>
+    <li>Une poêle </li>
+  </ul>
+  <br>
+<h3>La préparation</h3><br>
+  </center>
+  <ol class = "recette">
+      <li>Coupez la viande en cubes de 3cm et enlevez le gras.</li> 
+    <li>Coupez l'onion, faites le cuire à la poêle et ajoutez du beurre.</li>
+    <li>Faites de même avec les morceaux de viande petit à petit jusqu'à ce que tous soit cuit.</li>
+    <li>Ajoutez le tout dans une cocotte, salez, poivrez.</li>
+    <li>Ajoutez le vin et des carottes en rondelles.</li>
+    <li>Faites cuire séparemment les aubergines et les courgettes.</li>
+    <li>Portez à ébullition. Couvrez et laissez mijotez pendant 3 heures.</li>
+    <li>Ajoutez des herbes à votre guise et dégustez!</li>
+  </ol>
+
+
+
 </body>
 </html>
