@@ -9,38 +9,15 @@
 </head>
 <body>
 
-<nav>
-    <ul class="menu">
-      <li id ="titre">Enquête culinaire</li>
-        <li><a href="index.html">Accueil</a></li>
+<div id="menu-container"></div>
 
-        <li class="dropdown">
-            <a href="#">Entrées</a>
-            <ul class="submenu">
-                <li><a href="entree1.html">entree1</a></li>
-                <li><a href="entree2.html">entree2</a></li>
-                <li><a href="entree3.html">entree3</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a href="#">Plats</a>
-            <ul class="submenu">
-                <li><a href="plat1.html">plat1</a></li>
-                <li><a href="plat2.html">plat2</a></li>
-                <li><a href="plat3.html">plat3</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a href="#">Desserts</a>
-            <ul class="submenu">
-                <li><a href="dessert1.html">dessert1</a></li>
-                <li><a href="dessert2.html">dessert2</a></li>
-                <li><a href="dessert3.html">dessert3</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
+<script>
+fetch("menu.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("menu-container").innerHTML = data;
+  });
+</script>
+  
 </body>
 </html>
