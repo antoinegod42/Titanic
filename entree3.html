@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css?v2">
-  <title> Entree3 </title>
+  <title> Salade de chèvre chaud </title>
 </head>
 <body>
 
@@ -18,6 +18,80 @@ fetch("menu.html")
     document.getElementById("menu-container").innerHTML = data;
   });
 </script>
-  
+<h1>Salade de chèvre chaud</h1><br>
+<center> 
+<img src="https://cdn.pratico-pratiques.com/app/uploads/sites/4/2018/08/30183057/salade-de-chevre-chaud.jpeg" width="50%" alt="Salade de chèvre chaud" />
+
+<p> La salade de chèvre chaud est une entrée française classique et gourmande.<br> Elle se compose de salade verte, de toasts de fromage de chèvre chaud, et souvent de noix ou miel.<br> C’est une entrée légère, rapide à préparer et très savoureuse. </p> <br>
+
+<table class="info">
+  <thead>
+    <tr>
+      <th>Temps de préparation</th>
+      <th>Coût</th>
+      <th>Difficulté</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20 min</td>
+      <td>Faible</td>
+      <td>Facile</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><br>Les Ingrédients</h3> <br>
+
+  <label for="personnes">Nombre de personnes :</label>
+  <input type="number" id="personnes" value="4" min="1" onchange="updateIngredients()">
+</center> 
+  <ul class="a">
+    <li><span id="salade"></span> g de salade verte</li>
+    <li><span id="chevre"></span> tranches de fromage de chèvre</li>
+    <li><span id="pain"></span> tranches de pain</li>
+    <li><span id="noix"></span> g de noix (facultatif)</li>
+    <li><span id="miel"></span> c.à.s de miel (facultatif)</li>
+  </ul>
+
+  <script>
+    function updateIngredients() {
+      const personnes = Number(document.getElementById("personnes").value);
+
+      document.getElementById("salade").textContent = Math.ceil(personnes * 50); // 50 g de salade par personne
+      document.getElementById("chevre").textContent = Math.ceil(personnes * 1); // 1 tranche par personne
+      document.getElementById("pain").textContent = Math.ceil(personnes * 1); // 1 tranche par personne
+      document.getElementById("noix").textContent = Math.ceil(personnes * 10); // 10 g de noix par personne
+      document.getElementById("miel").textContent = Math.ceil(personnes * 0.5); // 0.5 c.à.s par personne
+    }
+
+    updateIngredients();
+  </script>
+  <br>
+  <center> 
+  <h3>Les ustensiles de cuisine</h3><br>
+  </center> 
+  <ul class="a">
+    <li>Une poêle ou un grill pour chauffer le fromage</li>
+    <li>Une planche à découper et un couteau</li>
+    <li>Une assiette ou un plat pour servir</li>
+  </ul>
+  <br>
+  <center> 
+<h3>La préparation</h3><br>
+  </center>
+  <ol class="recette">
+      <li>Préchauffez le four ou le grill.</li> 
+      <li>Faites griller légèrement les tranches de pain et déposez le fromage de chèvre dessus.</li>
+      <li>Placez les toasts au four ou sous le grill pendant 3-5 minutes jusqu’à ce que le fromage soit fondu et doré.</li>
+      <li>Dans chaque assiette, disposez la salade verte.</li>
+      <li>Ajoutez les toasts de chèvre chaud sur la salade.</li>
+      <li>Parsemez de noix et versez un filet de miel si vous le souhaitez.</li>
+      <li>Servez immédiatement et dégustez !</li>
+  </ol>
+
+</body>
+</html>
+
 </body>
 </html>
