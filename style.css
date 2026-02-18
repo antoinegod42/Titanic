@@ -143,12 +143,11 @@ table.info td {
     text-decoration: none;
 }
 h1 {
-  font-size : 9vw
+  font-size : 8vw;
 }
 h3 {
-  font-size: 4vw
+  font-size: clamp(19px, 2vw, 25px);
 }
 p, li, label, tr, td, th {
-  font-size: clamp(14px, 1.5vw, 20px);
+  font-size: clamp(17px, 1.5vw, 20px);
 }
-
