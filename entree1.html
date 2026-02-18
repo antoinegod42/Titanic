@@ -18,5 +18,83 @@ fetch("menu.html")
     document.getElementById("menu-container").innerHTML = data;
   });
 </script>
+<h1>Quiche Lorraine</h1><br>
+<center> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Quiche_Lorraine.jpg" width="50%" alt="Quiche Lorraine" />
+
+<p> La quiche lorraine est une entrée traditionnelle de la région Lorraine en France.<br> Elle est composée d’une pâte brisée garnie d’un mélange d’œufs, de crème et de lardons.<br> C’est une entrée savoureuse, simple à préparer et parfaite pour un repas convivial. </p> <br>
+
+<table class="info">
+  <thead>
+    <tr>
+      <th>Temps de préparation</th>
+      <th>Coût</th>
+      <th>Difficulté</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>45 min</td>
+      <td>Faible</td>
+      <td>Facile</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><br>Les Ingrédients</h3> <br>
+
+  <label for="personnes">Nombre de personnes :</label>
+  <input type="number" id="personnes" value="4" min="1" onchange="updateIngredients()">
+</center> 
+  <ul class="a">
+    <li><span id="pate"></span> pâte brisée</li>
+    <li><span id="oeufs"></span> œufs</li>
+    <li><span id="creme"></span> cl de crème fraîche</li>
+    <li><span id="lardons"></span> g de lardons</li>
+    <li><span id="fromage"></span> g de gruyère râpé (facultatif)</li>
+  </ul>
+
+  <script>
+    function updateIngredients() {
+      const personnes = Number(document.getElementById("personnes").value);
+
+      document.getElementById("pate").textContent = Math.ceil(personnes * 1); // 1 pâte pour 4 personnes
+      document.getElementById("oeufs").textContent = Math.ceil(personnes * 1.5); // 1,5 œuf par personne
+      document.getElementById("creme").textContent = Math.ceil(personnes * 50); // 50 ml de crème par personne
+      document.getElementById("lardons").textContent = Math.ceil(personnes * 50); // 50 g lardons par personne
+      document.getElementById("fromage").textContent = Math.ceil(personnes * 20); // 20 g gruyère par personne
+    }
+
+    updateIngredients();
+  </script>
+  <br>
+  <center> 
+  <h3>Les ustensiles de cuisine</h3><br>
+  </center> 
+  <ul class="a">
+    <li>Un moule à tarte</li>
+    <li>Un saladier</li>
+    <li>Un fouet</li>
+  </ul>
+  <br>
+  <center> 
+<h3>La préparation</h3><br>
+  </center>
+  <ol class="recette">
+      <li>Préchauffez le four à 180°C.</li> 
+      <li>Étalez la pâte brisée dans un moule à tarte et piquez le fond avec une fourchette.</li>
+      <li>Faites revenir les lardons dans une poêle quelques minutes.</li>
+      <li>Dans un saladier, mélangez les œufs et la crème fraîche. Salez et poivrez légèrement.</li>
+      <li>Répartissez les lardons sur la pâte, puis versez le mélange œufs-crème par-dessus.</li>
+      <li>Ajoutez éventuellement le gruyère râpé sur le dessus.</li>
+      <li>Enfournez pendant 30 à 35 minutes jusqu’à ce que la quiche soit dorée.</li>
+      <li>Laissez tiédir quelques minutes avant de servir et dégustez !</li>
+  </ol>
+
 </body>
 </html>
+
+</body>
+</html>
+
+
