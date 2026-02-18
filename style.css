@@ -148,7 +148,7 @@ table.info td {
     margin-bottom: 20px;
 }
 .tableau, .tableau th, .tableau td {
-    border: 2px solid Tomato;
+    border: 2px solid ;
 }
 .tableau th, .tableau td {
     padding: 10px;
@@ -156,6 +156,10 @@ table.info td {
 }
 .tableau th {
     background-color: Tomato;
+    color: white;
+}
+.tableau td {
+    background-color: lightsalmon;
     color: white;
 }
 .external-link, .anchor-link {
