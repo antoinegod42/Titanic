@@ -46,36 +46,39 @@ fetch("menu.html")
 
   <label for="personnes">Nombre de personnes :</label>
   <input type="number" id="personnes" value="4" min="1" onchange="updateIngredients()">
-
+</center> 
   <ul class="a">
-    <li ><span id="aubergine"></span> g d'aubergine</li>
-    <li ><span id="courgette"></span> g de courgette</li>
-    <li ><span id="poivron"></span> g de poivron</li>
-    <li ><span id="onion"></span> g de onion</li>
-    <li ><span id="tomate"></span> g de tomate</li>
+    <li ><span id="aubergine"></span> aubergines</li>
+    <li ><span id="courgette"></span> courgettes</li>
+    <li ><span id="poivron"></span> poivrons</li>
+    <li ><span id="onion"></span> onions</li>
+    <li ><span id="tomate"></span> tomates</li>
   </ul>
 
   <script>
     function updateIngredients() {
       const personnes = Number(document.getElementById("personnes").value);
 
-      document.getElementById("aubergine").textContent = personnes * 88;
-      document.getElementById("courgette").textContent = personnes * 88;
-      document.getElementById("poivron").textContent = personnes * 88;
-      document.getElementById("onion").textContent = personnes * 88;
-      document.getElementById("tomate").textContent = personnes * 125;
+      document.getElementById("aubergine").textContent = Math.ceil(personnes * 0.3);
+      document.getElementById("courgette").textContent = Math.ceil(personnes * 0.5);
+      document.getElementById("poivron").textContent = Math.ceil(personnes * 0.3);
+      document.getElementById("onion").textContent = Math.ceil(personnes * 0.3);
+      document.getElementById("tomate").textContent = Math.ceil(personnes * 0.8);
     }
 
     updateIngredients();
   </script>
   <br>
+  <center> 
   <h3>Les ustensiles de cuisines</h3><br>
+  </center> 
   <ul class = "a">
     <li>Une poêle </li>
     <li>Une planche à découper </li>
     <li>Un saladier </li>
   </ul>
   <br>
+  <center> 
 <h3>La préparation</h3><br>
   </center>
   <ol class = "recette">
