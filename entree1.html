@@ -58,7 +58,7 @@ fetch("menu.html")
     function updateIngredients() {
       const personnes = Number(document.getElementById("personnes").value);
 
-      document.getElementById("pate").textContent = Math.ceil(personnes * 1); // 1 pâte pour 4 personnes
+      document.getElementById("pate").textContent = Math.ceil(personnes * 0.25); // 1 pâte pour 4 personnes
       document.getElementById("oeufs").textContent = Math.ceil(personnes * 1.5); // 1,5 œuf par personne
       document.getElementById("creme").textContent = Math.ceil(personnes * 50); // 50 ml de crème par personne
       document.getElementById("lardons").textContent = Math.ceil(personnes * 50); // 50 g lardons par personne
