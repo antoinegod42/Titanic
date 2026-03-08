@@ -20,12 +20,12 @@ fetch("menu.html")
 </script>
   
 <center>
-<h1> Le QCM</h1><br>
-<p>Bienvenue sur la page de notre qcm.<br> Vous pourrez tester vos connaissances ici.<br>Bonne chance !</p>
+<h1> QCM</h1><br>
+<p>Vous pouvez tester vos connaissances ici.<br>Bonne chance !</p>
 </center>
   
 <div class ="question">
-<br><h3>Quel est le dernier plat ajouté ?</h3><br>
+<br><h3 class ="titre">Quel est le dernier plat ajouté ?</h3><br>
   
 <div class="reponse">
   <input type="radio" id="tata" name="drone" value="tata">
@@ -45,7 +45,7 @@ fetch("menu.html")
     <br>
 
   <div class ="question">
-    <h3> Quel est le cours de cuisine le plus cher ?</h3><br>
+    <h3 class ="titre"> Quel est le cours de cuisine le plus cher ?</h3><br>
       <select id = "q2">
         <option value="">Votre réponse :</option>
         <option value="1">Saveur gourmandes</option>
@@ -55,13 +55,17 @@ fetch("menu.html")
 </div>
     <br><br>
 <div class ="question">
-    <h3> Combien de legumes faut-il dans la ratatouille ?</h3><br>
+    <h3 class ="titre"> Combien de legumes faut-il dans la ratatouille ?</h3><br>
     <input type="text" id="q3" value ="Votre réponse :" onfocus = "this.value =''">
 </div>
-    <button onclick="corriger()" class ="valider">Valider</button><br>
+    <button onclick="corriger(); correction()" class ="valider">Valider</button><br>
 
     <h2 id="resultat"></h2> <br>
-  <button onclick="correction()" class = "correction"> Correction ici</button>
+
+  <div id="correction">
+
+  </div>
+   <button onclick="recommencer()" class="recommencer">Recommencer</button>
     <script>
         function corriger() {
             let score = 0;
@@ -92,6 +96,24 @@ fetch("menu.html")
             "Votre score est de : " + score + "/3";
             }
         }
+      function correction(){
+        document.getElementById("correction").innerHTML = "<h3 class='correctionh'>Quesiont 1: Quel est le dernier plat ajouté ?</h3><br><ol class ='recette'><li>La quiche lorraine</li><li id = 'correction1'>La ratatouille</li><li>Le gratin Dauphinois</li></ol><br><h3 class='correctionh'> Question 2: Quel est le cours de cuisine le plus cher ?</h3><br><input type='text' value ='Saveur gourmandes' id ='correction2'> <br><br><h3 class='correctionh'>Question 3: Combien de legumes faut-il dans la ratatouille ?</h3><br><input type='text' value ='5' id = 'correction3'>"
+      }
+      function recommencer() {
+
+  var radios = document.getElementsByName('drone');
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].checked = false;
+  }
+
+  document.getElementById("q2").value = "";
+
+  document.getElementById("q3").value = "Votre réponse:";
+
+  document.getElementById("resultat").innerHTML = "";
+
+  document.getElementById("correction").innerHTML = "";
+}
     </script>
 
 </body>
